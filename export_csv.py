@@ -5,7 +5,9 @@ import pandas as pd
 page = requests.get("https://emvolio.gov.gr/vaccinationtracker")
 soup = BeautifulSoup(page.content, 'html.parser')
 df = soup.find_all('table', class_='table-striped table table-hover')
+print(df[:100]}
 df = pd.read_html(df[0].prettify())
+print(len(df))
 df = df[0]
 
 
