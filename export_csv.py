@@ -10,7 +10,7 @@ logging.info('starting')
 headers = {
            "referer": "https://emvolio.gov.gr/vaccinationtracker",
            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-           'accept-encoding': 'gzip, deflate, br',
+           'accept-encoding': 'gzip, deflate',
            'accept-language': 'en-US,en;q=0.9',
            'sec-ch-ua': '"Chromium";v="86", "\"Not\\A;Brand";v="99", "Google Chrome";v="86"',
            'sec-ch-ua-mobile': '?0',
