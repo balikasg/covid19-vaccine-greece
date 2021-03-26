@@ -7,7 +7,8 @@ logging.basicConfig(level=logging.INFO)
 
 
 logging.info('starting')
-headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36'}
+headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36', 
+"Referer": "https://emvolio.gov.gr/vaccinationtracker"}
 page = requests.get("https://emvolio.gov.gr/vaccinationtracker", headers=headers)
 logging.info(page.status_code)
 soup = BeautifulSoup(page.content, 'html.parser')
