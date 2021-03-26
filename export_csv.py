@@ -1,11 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import logging  
+logging.basicConfig(level=logging.INFO)
 
+
+
+logging.info('starting')
 page = requests.get("https://emvolio.gov.gr/vaccinationtracker")
+logging.info(page.status_code)
 soup = BeautifulSoup(page.content, 'html.parser')
 df = soup.find_all('table', class_='table-striped table table-hover')
-print(df[:100])
 df = pd.read_html(df[0].prettify())
 print(len(df))
 df = df[0]
